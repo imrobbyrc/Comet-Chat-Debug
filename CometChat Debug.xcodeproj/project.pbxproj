@@ -13,6 +13,12 @@
 		D5388A622C69E4B4007CA8B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5388A602C69E4B4007CA8B2 /* Main.storyboard */; };
 		D5388A642C69E4B6007CA8B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5388A632C69E4B6007CA8B2 /* Assets.xcassets */; };
 		D5388A672C69E4B6007CA8B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5388A652C69E4B6007CA8B2 /* LaunchScreen.storyboard */; };
+		D5388A702C69E532007CA8B2 /* CometChatSDKUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5388A6F2C69E532007CA8B2 /* CometChatSDKUtils.swift */; };
+		D5388A722C69E547007CA8B2 /* CometChatCallUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5388A712C69E547007CA8B2 /* CometChatCallUtils.swift */; };
+		D5388A752C69E575007CA8B2 /* CometChatUIKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D5388A742C69E575007CA8B2 /* CometChatUIKitSwift */; };
+		D5388A782C69E5A8007CA8B2 /* CometChatCallsSDK in Frameworks */ = {isa = PBXBuildFile; productRef = D5388A772C69E5A8007CA8B2 /* CometChatCallsSDK */; };
+		D5388A7B2C69E9CB007CA8B2 /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = D5388A7A2C69E9CB007CA8B2 /* SwiftyUserDefaults */; };
+		D5388A7D2C69E9D7007CA8B2 /* DefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5388A7C2C69E9D7007CA8B2 /* DefaultKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,10 @@
 		D5388A632C69E4B6007CA8B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5388A662C69E4B6007CA8B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5388A682C69E4B6007CA8B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5388A6F2C69E532007CA8B2 /* CometChatSDKUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CometChatSDKUtils.swift; sourceTree = "<group>"; };
+		D5388A712C69E547007CA8B2 /* CometChatCallUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CometChatCallUtils.swift; sourceTree = "<group>"; };
+		D5388A7C2C69E9D7007CA8B2 /* DefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultKeys.swift; sourceTree = "<group>"; };
+		D5388A7E2C6A0076007CA8B2 /* CometChat Debug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CometChat Debug.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5388A782C69E5A8007CA8B2 /* CometChatCallsSDK in Frameworks */,
+				D5388A7B2C69E9CB007CA8B2 /* SwiftyUserDefaults in Frameworks */,
+				D5388A752C69E575007CA8B2 /* CometChatUIKitSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +69,8 @@
 		D5388A592C69E4B4007CA8B2 /* CometChat Debug */ = {
 			isa = PBXGroup;
 			children = (
+				D5388A7E2C6A0076007CA8B2 /* CometChat Debug.entitlements */,
+				D5388A6E2C69E522007CA8B2 /* CometChat */,
 				D5388A5A2C69E4B4007CA8B2 /* AppDelegate.swift */,
 				D5388A5C2C69E4B4007CA8B2 /* SceneDelegate.swift */,
 				D5388A5E2C69E4B4007CA8B2 /* ViewController.swift */,
@@ -63,8 +78,18 @@
 				D5388A632C69E4B6007CA8B2 /* Assets.xcassets */,
 				D5388A652C69E4B6007CA8B2 /* LaunchScreen.storyboard */,
 				D5388A682C69E4B6007CA8B2 /* Info.plist */,
+				D5388A7C2C69E9D7007CA8B2 /* DefaultKeys.swift */,
 			);
 			path = "CometChat Debug";
+			sourceTree = "<group>";
+		};
+		D5388A6E2C69E522007CA8B2 /* CometChat */ = {
+			isa = PBXGroup;
+			children = (
+				D5388A6F2C69E532007CA8B2 /* CometChatSDKUtils.swift */,
+				D5388A712C69E547007CA8B2 /* CometChatCallUtils.swift */,
+			);
+			path = CometChat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +108,11 @@
 			dependencies = (
 			);
 			name = "CometChat Debug";
+			packageProductDependencies = (
+				D5388A742C69E575007CA8B2 /* CometChatUIKitSwift */,
+				D5388A772C69E5A8007CA8B2 /* CometChatCallsSDK */,
+				D5388A7A2C69E9CB007CA8B2 /* SwiftyUserDefaults */,
+			);
 			productName = "CometChat Debug";
 			productReference = D5388A572C69E4B4007CA8B2 /* CometChat Debug.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +141,11 @@
 				Base,
 			);
 			mainGroup = D5388A4E2C69E4B4007CA8B2;
+			packageReferences = (
+				D5388A732C69E575007CA8B2 /* XCRemoteSwiftPackageReference "cometchat-chat-uikit-ios-swift" */,
+				D5388A762C69E5A8007CA8B2 /* XCRemoteSwiftPackageReference "ios-calls-sdk" */,
+				D5388A792C69E9CB007CA8B2 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
+			);
 			productRefGroup = D5388A582C69E4B4007CA8B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +174,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5388A5F2C69E4B4007CA8B2 /* ViewController.swift in Sources */,
+				D5388A702C69E532007CA8B2 /* CometChatSDKUtils.swift in Sources */,
 				D5388A5B2C69E4B4007CA8B2 /* AppDelegate.swift in Sources */,
 				D5388A5D2C69E4B4007CA8B2 /* SceneDelegate.swift in Sources */,
+				D5388A722C69E547007CA8B2 /* CometChatCallUtils.swift in Sources */,
+				D5388A7D2C69E9D7007CA8B2 /* DefaultKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +313,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -290,11 +328,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "CometChat Debug/CometChat Debug.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5V8864X67W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CometChat Debug/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera permission is required in order to be able to scan QR codes from Pickaroo website & ads";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Your microphone will be used when chatting with merchant or crew";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -305,11 +346,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pickaaroo.CometChat-Debug";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pick.a.roo.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -318,11 +362,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "CometChat Debug/CometChat Debug.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5V8864X67W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CometChat Debug/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera permission is required in order to be able to scan QR codes from Pickaroo website & ads";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Your microphone will be used when chatting with merchant or crew";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -333,11 +380,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pickaaroo.CometChat-Debug";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pick.a.roo.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -363,6 +413,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D5388A732C69E575007CA8B2 /* XCRemoteSwiftPackageReference "cometchat-chat-uikit-ios-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cometchat-pro/cometchat-chat-uikit-ios-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.15;
+			};
+		};
+		D5388A762C69E5A8007CA8B2 /* XCRemoteSwiftPackageReference "ios-calls-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cometchat-pro/ios-calls-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.6;
+			};
+		};
+		D5388A792C69E9CB007CA8B2 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sunshinejr/SwiftyUserDefaults";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D5388A742C69E575007CA8B2 /* CometChatUIKitSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5388A732C69E575007CA8B2 /* XCRemoteSwiftPackageReference "cometchat-chat-uikit-ios-swift" */;
+			productName = CometChatUIKitSwift;
+		};
+		D5388A772C69E5A8007CA8B2 /* CometChatCallsSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5388A762C69E5A8007CA8B2 /* XCRemoteSwiftPackageReference "ios-calls-sdk" */;
+			productName = CometChatCallsSDK;
+		};
+		D5388A7A2C69E9CB007CA8B2 /* SwiftyUserDefaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5388A792C69E9CB007CA8B2 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */;
+			productName = SwiftyUserDefaults;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D5388A4F2C69E4B4007CA8B2 /* Project object */;
 }
